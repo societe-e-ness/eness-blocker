@@ -2,13 +2,17 @@
 /**
  * Bot Blocker - Logique de blocage des bots
  *
- * @since 1.2.0
+ * @since 1.0.0
  */
 
 // Sécurité : empêcher l'accès direct
 if (!defined('ABSPATH')) {
     exit;
 }
+
+// Si ces fonctions existent déjà (ex: ancienne version d'eness-booster encore active
+// sur le site), on ne redéclare rien pour éviter un fatal "Cannot redeclare function".
+if (!function_exists('eness_limit_site_access')) {
 
 /**
  * Récupère la liste des user agents bloqués depuis le fichier .htaccess
@@ -160,7 +164,7 @@ function eness_update_htaccess_with_blocks($user_agents_to_block, $ips_to_block)
  * Reconstruit le .htaccess à partir de l'état actuel des transients
  * Cette fonction est la source unique de vérité pour le blocage dans .htaccess
  *
- * @since 1.2.4
+ * @since 1.0.0
  * @return void
  */
 function eness_update_htaccess_from_transients() {
@@ -413,11 +417,13 @@ function eness_bot_blocker_unblock_all() {
  * Nettoie automatiquement le .htaccess des bots dont le transient a expiré
  * Cette fonction est appelée périodiquement par le cron WordPress
  *
- * @since 1.2.4
+ * @since 1.0.0
  * @return void
  */
 function eness_bot_blocker_cleanup_expired_blocks() {
     // Reconstruction complète du .htaccess à partir de l'état des transients
     eness_update_htaccess_from_transients();
 }
+
+} // fin if (!function_exists('eness_limit_site_access'))
 

@@ -2,13 +2,17 @@
 /**
  * Bot Blocker - Gestion des options et settings
  *
- * @since 1.2.0
+ * @since 1.0.0
  */
 
 // Sécurité : empêcher l'accès direct
 if (!defined('ABSPATH')) {
     exit;
 }
+
+// Si ces fonctions existent déjà (ex: ancienne version d'eness-booster encore active
+// sur le site), on ne redéclare rien pour éviter un fatal "Cannot redeclare function".
+if (!function_exists('eness_bot_blocker_get_default_settings')) {
 
 /**
  * Récupère les paramètres par défaut du bot blocker
@@ -195,7 +199,7 @@ function eness_bot_blocker_get_default_settings() {
  * Cette fonction ne sert QUE lors de la première migration
  * Une fois eness_bot_blocker_default_settings créé en BDD, elle n'est plus utilisée
  *
- * @since 1.2.4
+ * @since 1.0.0
  * @return array
  */
 function eness_bot_blocker_get_legacy_defaults() {
@@ -264,7 +268,7 @@ function eness_bot_blocker_merge_default_collection($current_settings, $stored_d
  * Cette fonction compare les defaults stockés en BDD avec les defaults du code
  * et migre automatiquement les valeurs qui correspondent aux anciens defaults
  *
- * @since 1.2.4
+ * @since 1.0.0
  * @return void
  */
 function eness_bot_blocker_auto_migrate_settings() {
@@ -481,4 +485,6 @@ function eness_bot_blocker_get_ip_counters_stats() {
 
     return $stats;
 }
+
+} // fin if (!function_exists('eness_bot_blocker_get_default_settings'))
 

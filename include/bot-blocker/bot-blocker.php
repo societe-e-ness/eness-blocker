@@ -5,7 +5,7 @@
  * Cette fonctionnalité surveille et bloque automatiquement les bots qui accèdent
  * trop fréquemment au site en les ajoutant dans le .htaccess
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 
 // Sécurité : empêcher l'accès direct
@@ -17,10 +17,15 @@ if (!defined('ABSPATH')) {
 require_once __DIR__ . '/bot-blocker-settings.php';
 require_once __DIR__ . '/bot-blocker-core.php';
 
+// Si ces fonctions/hooks existent déjà (ex: ancienne version d'eness-booster encore
+// active sur le site), on ne redéclare rien pour éviter un fatal "Cannot redeclare function"
+// et un double enregistrement des hooks (cron/migration exécutés deux fois).
+if (!function_exists('eness_bot_blocker_add_cron_interval')) {
+
 /**
  * Ajoute un intervalle de 5 minutes pour le cron WordPress
  *
- * @since 1.2.4
+ * @since 1.0.0
  * @param array $schedules Intervalles existants
  * @return array Intervalles avec le nouvel intervalle ajouté
  */
@@ -37,7 +42,7 @@ add_filter('cron_schedules', 'eness_bot_blocker_add_cron_interval');
  * S'assure que le cron de nettoyage est bien planifié
  * Vérifie à chaque init si le cron existe, sinon le planifie
  *
- * @since 1.2.4
+ * @since 1.0.0
  * @return void
  */
 function eness_bot_blocker_ensure_cron_scheduled() {
@@ -57,3 +62,5 @@ add_action('eness_bot_blocker_cleanup_cron', 'eness_bot_blocker_cleanup_expired_
 if (is_admin()) {
     require_once __DIR__ . '/bot-blocker-admin.php';
 }
+
+} // fin if (!function_exists('eness_bot_blocker_add_cron_interval'))

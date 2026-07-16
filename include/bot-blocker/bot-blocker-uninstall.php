@@ -2,7 +2,7 @@
 /**
  * Bot Blocker - Nettoyage à la désinstallation
  *
- * @since 1.5.0
+ * @since 1.0.0
  */
 
 // Sécurité : empêcher l'accès direct

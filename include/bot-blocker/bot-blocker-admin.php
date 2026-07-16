@@ -2,13 +2,17 @@
 /**
  * Bot Blocker - Interface d'administration
  *
- * @since 1.2.0
+ * @since 1.0.0
  */
 
 // Sécurité : empêcher l'accès direct
 if (!defined('ABSPATH')) {
     exit;
 }
+
+// Si ces fonctions existent déjà (ex: ancienne version d'eness-booster encore active
+// sur le site), on ne redéclare rien pour éviter un fatal "Cannot redeclare function".
+if (!function_exists('eness_bot_blocker_add_admin_menu')) {
 
 /**
  * Ajoute la page Bot Blocker au menu admin
@@ -753,4 +757,6 @@ function eness_bot_blocker_admin_styles($hook) {
     wp_enqueue_style('eness-bot-blocker-admin', plugins_url('../../assets/css/bot-blocker-admin.css', __FILE__), array(), '1.1.0');
 }
 add_action('admin_enqueue_scripts', 'eness_bot_blocker_admin_styles');
+
+} // fin if (!function_exists('eness_bot_blocker_add_admin_menu'))
 
