@@ -1,0 +1,180 @@
+#eness_panel {
+  margin: 35px 50px 30px 30px;
+}
+#eness_panel #eness_panel_wrapper {
+  background: white;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  color: #32373c;
+}
+#eness_panel #eness_panel_wrapper #eness_panel_header {
+  background-color: #94be47;
+  padding: 25px 28px;
+  line-height: 0.8;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+}
+#eness_panel #eness_panel_wrapper #eness_panel_header h1 {
+  color: white;
+  font-weight: initial;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs > ul {
+  background-color: rgba(148, 190, 71, 0.8);
+  margin: 0;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs > ul > li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs > ul > li.ui-tabs-active {
+  background-color: #b4d479;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs > ul > li a {
+  color: white;
+  display: inline-block;
+  padding: 20px;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs > ul > li a:hover {
+  background-color: #b4d479;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs > ul > li a:focus {
+  box-shadow: none;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content {
+  padding: 50px 40px 40px;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table th {
+  width: 30%;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td {
+  padding: 0;
+  width: 70%;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > * {
+  width: 100%;
+  border-radius: 4px;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.small_size {
+  width: 195px;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.medium_size {
+  width: 65%;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox {
+  background-color: rgba(148, 190, 71, 0.25);
+  transition: all 0.3s;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background-color: rgba(148, 190, 71, 0.25);
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox .custom_checkbox_button_slide {
+  left: 5px;
+  transition: all 0.3s;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox.is_activate {
+  background-color: #94be47;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox.is_activate .custom_checkbox_button_slide {
+  left: 50%;
+  margin-left: -5px;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox .custom_checkbox_text {
+  padding: 11px;
+  width: 50%;
+  float: left;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 600;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox .custom_checkbox_text.activate_on_value {
+  color: white;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox .custom_checkbox_button_slide {
+  position: absolute;
+  background-color: #FFF;
+  width: 50%;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox.small_size {
+  width: 195px;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > *.custom_checkbox_field .custom_checkbox.medium_size {
+  width: 65%;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > input:not([type=checkbox]) {
+  border: none;
+  box-shadow: none;
+  background: rgba(148, 190, 71, 0.25);
+  padding: 13px;
+  transition: background 0.2s;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > input:not([type=checkbox]):not(.small_size):not(.medium_size) {
+  width: 100%;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > input:not([type=checkbox]):focus {
+  background: rgba(148, 190, 71, 0.5);
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > input[type=checkbox] {
+  width: initial;
+  border-radius: initial;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > select {
+  border: none;
+  box-shadow: none;
+  background: rgba(148, 190, 71, 0.25);
+  height: auto;
+  padding: 12px 10px;
+  transition: background 0.2s;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > select:not(.small_size):not(.medium_size) {
+  width: 100%;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td > select:focus {
+  background: rgba(148, 190, 71, 0.5);
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .form-table td .alert {
+  width: 100%;
+  display: inline-block;
+  font-weight: bold;
+  color: red;
+  text-decoration: underline;
+  margin: 15px 0 10px;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .plugin_overview {
+  width: calc(25% - 15px);
+  display: inline-block;
+  min-width: 300px;
+  margin: 0 15px 15px 0;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .plugin_overview:nth-last-of-type(1) {
+  margin-right: 0;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .plugin_overview .info {
+  border: 2px solid #94be47;
+  border-radius: 0 0 5px 5px;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .plugin_overview .info span {
+  display: block;
+  padding: 1% 2%;
+  text-align: center;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .plugin_overview .info span.nom {
+  font-weight: bold;
+  padding-bottom: 0;
+}
+#eness_panel #eness_panel_wrapper #eness_tabs .eness_panel_content .plugin_overview .info span.version {
+  padding-top: 0;
+}
