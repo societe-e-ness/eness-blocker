@@ -98,6 +98,12 @@ function eness_bot_blocker_get_default_settings() {
                 'enabled' => true,
                 'permanent_block' => true,
             ),
+            'ip_20_9_15_100' => array(
+                'name' => 'IP force brute 8',
+                'address' => '20.9.15.100',
+                'enabled' => true,
+                'permanent_block' => true,
+            ),
         ),
         'monitored_bots' => array(
             'facebookexternalhit' => array(
