@@ -220,6 +220,31 @@ function eness_bot_blocker_get_default_settings() {
                 'user_agent' => 'MJ12bot',
                 'enabled' => true,
             ),
+            'iboubot' => array(
+                'name' => 'IbouBot',
+                'user_agent' => 'IbouBot',
+                'enabled' => true,
+            ),
+            'gptbot' => array(
+                'name' => 'GPTBot',
+                'user_agent' => 'GPTBot',
+                'enabled' => true,
+            ),
+            'seranking' => array(
+                'name' => 'SERanking',
+                'user_agent' => 'SERanking',
+                'enabled' => true,
+            ),
+            'applebot' => array(
+                'name' => 'AppleBot',
+                'user_agent' => 'AppleBot',
+                'enabled' => true,
+            ),
+            'bytespider' => array(
+                'name' => 'Bytespider',
+                'user_agent' => 'Bytespider',
+                'enabled' => true,
+            ),
         ),
     );
 }

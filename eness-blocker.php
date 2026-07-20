@@ -7,7 +7,7 @@
  * Plugin Name: e-Ness Blocker
  * Description: Protège le site contre les bots et IPs malveillants en limitant leur fréquence d'accès
  * Plugin URI: https://www.eness.fr
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: e-Ness
  * Author URI: https://www.eness.fr
  * Text Domain: eness-blocker
