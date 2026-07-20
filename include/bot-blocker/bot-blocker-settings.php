@@ -104,6 +104,12 @@ function eness_bot_blocker_get_default_settings() {
                 'enabled' => true,
                 'permanent_block' => true,
             ),
+            'ip_141_98_142_119' => array(
+                'name' => 'IP force brute 9',
+                'address' => '141.98.142.119',
+                'enabled' => true,
+                'permanent_block' => true,
+            ),
         ),
         'monitored_bots' => array(
             'facebookexternalhit' => array(
