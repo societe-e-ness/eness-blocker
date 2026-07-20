@@ -110,6 +110,24 @@ function eness_bot_blocker_get_default_settings() {
                 'enabled' => true,
                 'permanent_block' => true,
             ),
+            'ip_185_177_72_22' => array(
+                'name' => 'IP force brute 10',
+                'address' => '185.177.72.22',
+                'enabled' => true,
+                'permanent_block' => true,
+            ),
+            'ip_185_177_72_38' => array(
+                'name' => 'IP force brute 11',
+                'address' => '185.177.72.38',
+                'enabled' => true,
+                'permanent_block' => true,
+            ),
+            'ip_185_177_72_69' => array(
+                'name' => 'IP force brute 12',
+                'address' => '185.177.72.69',
+                'enabled' => true,
+                'permanent_block' => true,
+            ),
         ),
         'monitored_bots' => array(
             'facebookexternalhit' => array(
